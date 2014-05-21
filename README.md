@@ -29,6 +29,7 @@ Chainy action that sets the chain data as the output of an executed script
 
 <!-- /DESCRIPTION -->
 
+
 Optionally accepts a single object argument containg options to be forwarded onto [safeps's spawn command](https://github.com/bevry/safeps#processes), then again onto [node's spawn command](http://nodejs.org/api/child_process.html#child_process_child_process_spawn_command_args_options)
 
 ``` javascript
@@ -55,7 +56,7 @@ require('chainy-core').create().require('set exec log')
 ### [Browserify](http://browserify.org/)
 - Use: `require('chainy-plugin-exec')`
 - Install: `npm install --save chainy-plugin-exec`
-- CDN URL: `//wzrd.in/bundle/chainy-plugin-exec@0.1.0`
+- CDN URL: `//wzrd.in/bundle/chainy-plugin-exec@0.2.0`
 
 ### [Ender](http://ender.jit.su/)
 - Use: `require('chainy-plugin-exec')`
