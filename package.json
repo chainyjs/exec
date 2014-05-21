@@ -48,6 +48,7 @@
     "chainy-core": "*"
   },
   "devDependencies": {
+    "chainy-plugin-set": "*",
     "chainy-core": "*",
     "joe": "~1.4.0",
     "joe-reporter-console": "~1.2.1",

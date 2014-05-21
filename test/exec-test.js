@@ -5,20 +5,40 @@
 
 	// Test
 	joe.describe('exec plugin', function(describe,it){
-		var Chainy = require('chainy-core').subclass().addExtension('exec', require('../'))
+		var Chainy = require('chainy-core').subclass().require('set').addExtension('exec', require('../'))
 
-		it("should work", function(next){
+		it("should work without options", function(next){
 			if ( process.env.TRAVIS ) {
 				console.log('skipping for travis environment')
 				return next()
 			}
 
 			Chainy.create()
-				.exec('echo -n hello world')
+				.set('echo -n hello world')
+				.exec()
 				.done(function(err, result){
 					if (err)  return next(err)
-					expect(result).to.eql('hello world')
+					expect(result).to.equal('hello world')
 					return next()
+				})
+		})
+
+		it("should work with options", function(next){
+			if ( process.env.TRAVIS ) {
+				console.log('skipping for travis environment')
+				return next()
+			}
+
+			Chainy.create()
+				.set('cat package.json')
+				.exec({cwd: __dirname+'/..'})
+				.done(function(err, execResult){
+					if (err)  return next(err)
+					require('fs').readFile(__dirname+'/../package.json', function(err, fsResult){
+						if (err)  return next(err)
+						expect(execResult.toString()).to.equal(fsResult.toString())
+						return next()
+					})
 				})
 		})
 	})

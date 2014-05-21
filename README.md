@@ -29,10 +29,16 @@ Chainy action that sets the chain data as the output of an executed script
 
 <!-- /DESCRIPTION -->
 
+Optionally accepts a single object argument containg options to be forwarded onto [safeps's spawn command](https://github.com/bevry/safeps#processes), then again onto [node's spawn command](http://nodejs.org/api/child_process.html#child_process_child_process_spawn_command_args_options)
 
 ``` javascript
-require('chainy-core').create().require('exec', 'log')
-	.exec('echo -n hello world').log()  // "hello world"
+// No options
+require('chainy-core').create().require('set exec log')
+	.set('echo -n hello world').exec().log()  // "hello world"
+
+// Passing cwd as an option to change the directory in which the command is executed
+require('chainy-core').create().require('set exec log')
+	.set('cat package.json').exec({cwd: __dirname}).log()  // the contents of the `package.json` file which this script was executed in
 ```
 
 <!-- /CHAINY_DOCUMENTATION -->
