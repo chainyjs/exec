@@ -1,7 +1,7 @@
 
 <!-- TITLE/ -->
 
-# Exec action for [ChainyJS](http://chainy.bevry.me)
+# Exec action for [ChainyJS](http://chainyjs.org)
 
 <!-- /TITLE -->
 
@@ -56,7 +56,7 @@ require('chainy-core').create().require('set exec log')
 ### [Browserify](http://browserify.org/)
 - Use: `require('chainy-plugin-exec')`
 - Install: `npm install --save chainy-plugin-exec`
-- CDN URL: `//wzrd.in/bundle/chainy-plugin-exec@0.2.0`
+- CDN URL: `//wzrd.in/bundle/chainy-plugin-exec@1.0.0`
 
 ### [Ender](http://ender.jit.su/)
 - Use: `require('chainy-plugin-exec')`
@@ -104,8 +104,11 @@ No sponsors yet! Will you be the first?
 
 ### Contributors
 
-No contributors yet! Will you be the first?
-[Discover how you can contribute by heading on over to the `CONTRIBUTING.md` file.](https://github.com/chainy-plugins/chainy-plugin-exec/blob/master/CONTRIBUTING.md#files)
+These amazing people have contributed code to this project:
+
+- [Benjamin Lupton](https://github.com/balupton) <b@lupton.cc> — [view contributions](https://github.com/chainy-plugins/exec/commits?author=balupton)
+
+[Become a contributor!](https://github.com/chainy-plugins/chainy-plugin-exec/blob/master/CONTRIBUTING.md#files)
 
 <!-- /BACKERS -->
 

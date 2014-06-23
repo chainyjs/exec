@@ -1,12 +1,12 @@
 {
-  "title": "Exec action for [ChainyJS](http://chainy.bevry.me)",
+  "title": "Exec action for [ChainyJS](http://chainyjs.org)",
   "name": "chainy-plugin-exec",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "Chainy action that sets the chain data as the output of an executed script",
   "homepage": "https://github.com/chainy-plugins/exec",
   "keywords": [
     "chainy-action",
-    "chainy-setter",
+    "chainy-modifier",
     "chainy-plugin",
     "chainy-extension",
     "chainy-addon",
@@ -30,7 +30,9 @@
   "maintainers": [
     "Benjamin Lupton <b@lupton.cc> (https://github.com/balupton)"
   ],
-  "contributors": [],
+  "contributors": [
+    "Benjamin Lupton <b@lupton.cc> (https://github.com/balupton)"
+  ],
   "bugs": {
     "url": "https://github.com/chainy-plugins/exec/issues"
   },
@@ -45,12 +47,12 @@
     "safeps": "^2.2.11"
   },
   "peerDependencies": {
-    "chainy-core": "*"
+    "chainy-core": "1"
   },
   "devDependencies": {
-    "chainy-plugin-set": "*",
-    "chainy-core": "*",
-    "joe": "~1.4.0",
+    "chainy-plugin-set": "1",
+    "chainy-core": "1",
+    "joe": "~1.5.0",
     "joe-reporter-console": "~1.2.1",
     "chai": "~1.9.1",
     "projectz": "~0.3.11"
