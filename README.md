@@ -34,12 +34,16 @@ Optionally accepts a single object argument containg options to be forwarded ont
 
 ``` javascript
 // No options
-require('chainy-core').create().require('set exec log')
-	.set('echo -n hello world').exec().log()  // "hello world"
+require('chainy').create().require('set exec log')
+	.set('echo -n hello world')
+	.exec()
+	.log()  // "hello world"
 
 // Passing cwd as an option to change the directory in which the command is executed
-require('chainy-core').create().require('set exec log')
-	.set('cat package.json').exec({cwd: __dirname}).log()  // the contents of the `package.json` file which this script was executed in
+require('chainy').create().require('set exec log')
+	.set('cat package.json')
+	.exec({cwd: __dirname})
+	.log()  // the contents of the `package.json` file which this script was executed in
 ```
 
 <!-- /CHAINY_DOCUMENTATION -->
